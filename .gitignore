@@ -2,3 +2,4 @@ packages/
 paket.exe 
 .vs/ 
 bench.exe 
+BenchmarkDotNet.Artifacts/

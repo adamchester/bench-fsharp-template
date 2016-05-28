@@ -1,4 +1,5 @@
 // compile with "fsc -O bench.fsx"
+namespace Bench
 
 #I __SOURCE_DIRECTORY__
 
@@ -16,14 +17,14 @@ type ConfigNet45MemoryDiag() as this =
   do
     this.Add(MemoryDiagnoser())
     this.Add(Job.Default
-              .WithIterationTime(Count 1000)
+              .WithIterationTime(Count 100)
               .WithLaunchCount(Count 3)
               .WithWarmupCount(Count 3)
               .WithTargetCount(Count 3)
               .With(Framework.V45)
               .With(Platform.AnyCpu))
 
-[<ConfigNet45MemoryDiag>]
+[<Config(typeof<ConfigNet45MemoryDiag>)>]
 type MyBenchmark() =
   
   [<Benchmark>]
@@ -31,3 +32,9 @@ type MyBenchmark() =
 
   [<Benchmark>]
   member this.AddFloats () = 1.0 + 1.0
+
+module Program =
+  [<EntryPoint>]
+  let main argv =
+    BenchmarkRunner.Run<MyBenchmark>() |> ignore
+    0
