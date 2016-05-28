@@ -1,2 +1,4 @@
 packages/ 
 paket.exe 
+.vs/ 
+bench.exe 

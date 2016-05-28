@@ -5,3 +5,7 @@ NUGET
       BenchmarkDotNet (>= 0.9.6) - framework: >= net40, dnx451
       Microsoft.Diagnostics.Tracing.TraceEvent (>= 1.0.41) - framework: >= net40, dnx451
     Microsoft.Diagnostics.Tracing.TraceEvent (1.0.41) - framework: >= net40, dnx451
+
+GROUP Tests
+NUGET
+  remote: https://www.nuget.org/api/v2

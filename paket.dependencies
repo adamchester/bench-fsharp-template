@@ -1,3 +1,7 @@
 source https://www.nuget.org/api/v2
 nuget BenchmarkDotNet
 nuget BenchmarkDotNet.Diagnostics.Windows
+
+group Tests
+source https://www.nuget.org/api/v2
+
