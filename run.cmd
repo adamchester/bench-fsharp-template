@@ -1,5 +1,8 @@
 @ECHO OFF
 
+.paket\paket.bootstrapper.exe 3.0.0-beta054
+.paket\paket install
+
 fsc -O bench.fsx -o:bin\Bench.exe
 
 copy packages\BenchmarkDotNet\lib\net40\BenchmarkDotNet.dll bin

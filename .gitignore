@@ -3,3 +3,4 @@ paket.exe
 .vs/ 
 bench.exe 
 BenchmarkDotNet.Artifacts/
+bin/ 
