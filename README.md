@@ -1,5 +1,5 @@
 # bench-fsharp-template
-A simple template for an F# benchmark using BenchmarkDotNet and Diagnostics.Windows
+A simple template for an F# benchmark using [BenchmarkDotNet](https://github.com/PerfDotNet/BenchmarkDotNet) and Diagnostics.Windows
 
 ## Why?
 
